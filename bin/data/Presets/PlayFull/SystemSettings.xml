@@ -13,7 +13,7 @@
 <Widget>
     <Kind>4</Kind>
     <Name>brush_width</Name>
-    <Value>12.807882309</Value>
+    <Value>19.950738907</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -23,7 +23,7 @@
 <Widget>
     <Kind>4</Kind>
     <Name>line_width</Name>
-    <Value>2.064039469</Value>
+    <Value>2.773398876</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -44,6 +44,11 @@
     <Kind>4</Kind>
     <Name>repulsion_pct</Name>
     <Value>0.497536957</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>color_hue</Name>
+    <Value>0.733020127</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>

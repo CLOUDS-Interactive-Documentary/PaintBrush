@@ -61,6 +61,7 @@ protected:
     
     float   lineWidth;
     
+    float   colorHue;
     float   colorLerp;
     float   colorRandom;
     

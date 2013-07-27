@@ -32,6 +32,7 @@ void CloudsVisualSystemPaintBrush::selfSetupSystemGui()
     sysGui->addSlider("repulsion_rad", 0, 20, &brushRepRad);
     sysGui->addSlider("repulsion_pct", 0.0, 1.0, &brushRepPct);
     
+    sysGui->addSlider("color_hue", 0.0, 1.0, &colorHue);
     sysGui->addSlider("color_lerp",0.0, 1.0, &colorLerp);
     sysGui->addSlider("color_random", 0.0, 0.02, &colorRandom);
     
@@ -66,7 +67,7 @@ void CloudsVisualSystemPaintBrush::selfUpdate()
     if (brush.getVel().length() < particlesThreshold){
         ofFloatColor color;
         color.set(1, 0, 0);
-        color.setHue( abs( sin(ofGetElapsedTimef()*0.01) ) );
+        color.setHue( colorHue );
         brush.setColor(color, colorLerp, colorRandom);
     }
     
@@ -91,6 +92,10 @@ void CloudsVisualSystemPaintBrush::selfUpdate()
     brush.draw();
     
     canvas.end();
+    
+    while(particles.size()>500){
+        particles.erase(particles.begin());
+    }
     
     ofPopStyle();
 }
